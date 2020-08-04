@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scores.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="InputEventAction" id=2]
+action = "ui_select"
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="Scores" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="LeftS" type="Label" parent="."]
+margin_left = 60.0
+margin_right = 83.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightS" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -60.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -34.0
+margin_right = 34.0
+margin_bottom = 20.0
+shortcut = SubResource( 3 )
+text = "Respawn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
