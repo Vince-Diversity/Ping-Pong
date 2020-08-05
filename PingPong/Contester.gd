@@ -11,7 +11,7 @@ func _ready():
 	# Maybe the capsule shape prevents ball getting stuck
 	var paddle_height = $CollisionShape2D.shape.height
 	var paddle_radius = $CollisionShape2D.shape.radius
-	paddle_size = Vector2(paddle_radius*2, paddle_height/2)
+	paddle_size = Vector2(paddle_radius, paddle_height/2)
 	$ColorRect.margin_top = - paddle_height / 2 - paddle_radius
 	$ColorRect.margin_bottom = paddle_height / 2 + paddle_radius
 	$ColorRect.margin_right = paddle_radius
