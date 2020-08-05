@@ -19,7 +19,7 @@ func _physics_process(delta):
 			preparing()
 	if foc_vel.x < 0:
 		swinging()	# just to return to middle
-	position.y += vel * delta * speed
+	position.y += vel * delta * speed		# <but isn't delta fixed for physics?>
 
 func preparing():
 	var paddle_top = position.y - paddle_size.y

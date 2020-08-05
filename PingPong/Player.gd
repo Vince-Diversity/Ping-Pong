@@ -9,4 +9,4 @@ func _physics_process(delta):	# make the physics values more accurate
 		vel -= 1
 	if Input.is_action_pressed("ui_down"):
 		vel += 1
-	position.y += vel * delta * speed
+	position.y += vel * delta * speed		# <but isn't delta fixed for physics?>

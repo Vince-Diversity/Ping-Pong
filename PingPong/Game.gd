@@ -6,7 +6,7 @@ var ball
 func _ready():
 	$LeftOut.connect("body_entered", self, "on_Left_out")
 	$RightOut.connect("body_entered", self, "on_Right_out")
-	$Scores.connect("reset", self, "on_Reset")
+	$Scores.connect("reset", self, "on_Reset")		# why not connect directly in Game?
 
 	randomize()		# seed, that is
 	spawn_ball()
